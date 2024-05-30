@@ -1,4 +1,4 @@
-First of all, launch 2 ec2 t2 medium instances.
+lFirst of all, launch 2 ec2 t2 medium instances.
 Then Install and setup kubeadm. Connect node server to master through kubeadm token.
 Clone the code to master git clone https://github.com/LondheShubham153/two-tier-flask-app.git
 Delete k8 folder from that cloning repository.
@@ -11,4 +11,11 @@ Then create and apply mysql-pvc.yml as persistent volume claim.
 Create and apply mysql-deployment.yml.
 Create and apply mysql-svc.yml.
 Now check that wheter the site is working or not through http://public ip of nodeserver:30004. It will give operational error.
-Edit two-tier-app-deployment.yml and use the cluster ip of mysql-svc as 
+Edit two-tier-app-deployment.yml and use the cluster ip of mysql-svc as value for the key of MYSQL Host environment variable.
+Now check that wheter the site is working or not through http://public ip of nodeserver:30004. It will give progmaatic error because of non-availibility of mysql table.
+Go to node server and run command of sudo crictl pods to check the running pods and sudo crictl ps to check the running containers.
+Go the mysql container throuhg command of sudo crictl exec -it <containernamne> /bin/bash
+Then run command of mysql -u root -p. Write "admin" as password
+Then it will open mysql. Then write command of show databases;
+Then use mydb; and write the command in message.sql
+Now check that wheter the site is working or not through http://public ip of nodeserver:30004. It will be running.
