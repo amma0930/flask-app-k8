@@ -10,4 +10,5 @@ Then create and apply mysql-pv.yml as persistent volume.
 Then create and apply mysql-pvc.yml as persistent volume claim.
 Create and apply mysql-deployment.yml.
 Create and apply mysql-svc.yml.
+Now check that wheter the site is working or not through http://public ip of nodeserver:30004. It will give operational error.
 Edit two-tier-app-deployment.yml and use the cluster ip of mysql-svc as 
