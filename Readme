@@ -3,3 +3,6 @@ Then Install and setup kubeadm. Connect node server to master through kubeadm to
 Clone the code to master git clone https://github.com/LondheShubham153/two-tier-flask-app.git
 Delete k8 folder from that cloning repository.
 Create and move to new k8 directory.
+Create and apply two-tier-app-pod.yml
+Create and apply two-tier-app-deployment.yml
+Create and apply two-tier-app-svc.yml and thus it allows to expose 
