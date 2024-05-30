@@ -5,4 +5,9 @@ Delete k8 folder from that cloning repository.
 Create and move to new k8 directory.
 Create and apply two-tier-app-pod.yml
 Create and apply two-tier-app-deployment.yml
-Create and apply two-tier-app-svc.yml and thus it allows to expose 
+Create and apply two-tier-app-svc.yml and thus it allows to expose 30004 port as target nodeport for the service.
+Then create and apply mysql-pv.yml as persistent volume.
+Then create and apply mysql-pvc.yml as persistent volume claim.
+Create and apply mysql-deployment.yml.
+Create and apply mysql-svc.yml.
+Edit two-tier-app-deployment.yml and use the cluster ip of mysql-svc as 
